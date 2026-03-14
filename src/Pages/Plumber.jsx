@@ -19,16 +19,16 @@ export default function Plumber() {
       {/* Navbar */}
       <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-5 flex justify-between items-center">
         <h1 className="text-2xl font-bold">
-          Wor<span className="text-blue-400">Ko</span>
+          Wor<span className="text-orange-400">Ko</span>
         </h1>
 
         <div className="hidden md:flex gap-8 items-center text-sm">
-          <a className="hover:text-blue-400 cursor-pointer">Home</a>
+          <a className="hover:text-orange-400 cursor-pointer">Home</a>
           <a className="cursor-pointer">Services</a>
           <a className="cursor-pointer">About Us</a>
           <a className="cursor-pointer">Login</a>
 
-          <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-xl">
+          <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl">
             Get the App
           </button>
         </div>
@@ -100,7 +100,7 @@ export default function Plumber() {
                 onClick={() => setSelected(index)}
                 className={`rounded-xl border px-4 py-3 transition ${
                   selected === index
-                    ? "bg-blue-500 text-white border-blue-500"
+                    ? "bg-orange-500 text-white border-orange-500"
                     : "bg-white hover:bg-gray-100"
                 }`}
               >
@@ -116,7 +116,7 @@ export default function Plumber() {
 
           <textarea
             placeholder="Describe your plumbing issue..."
-            className="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-4 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
             rows={4}
           />
 
@@ -144,7 +144,7 @@ export default function Plumber() {
 
           {/* Book Button */}
 
-          <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-6 text-lg rounded-2xl">
+          <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-6 text-lg rounded-2xl">
             Book a Plumber
           </button>
 
@@ -169,17 +169,17 @@ export default function Plumber() {
             <ul className="space-y-2 text-sm">
 
               <li className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-blue-500" />
+                <CheckCircle size={16} className="text-orange-500" />
                 Experienced & Verified
               </li>
 
               <li className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-blue-500" />
+                <CheckCircle size={16} className="text-orange-500" />
                 Arrival Within 60 Minutes
               </li>
 
               <li className="flex items-center gap-2">
-                <CheckCircle size={16} className="text-blue-500" />
+                <CheckCircle size={16} className="text-orange-500" />
                 Cash, Card & UPI Accepted
               </li>
 

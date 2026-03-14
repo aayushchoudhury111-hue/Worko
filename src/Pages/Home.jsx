@@ -13,7 +13,7 @@ export default function Home() {
       {/* NAVBAR */}
       <nav className="flex justify-between items-center px-10 py-5 bg-[#1e3a5f] text-white">
         <h1 className="text-2xl font-bold">
-          Wor<span className="text-orange-500">ko</span>
+          Wor<span className="text-orange-500">Ko</span>
         </h1>
 
         <div className="flex gap-8 items-center">
