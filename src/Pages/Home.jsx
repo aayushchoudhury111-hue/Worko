@@ -17,10 +17,10 @@ export default function Home() {
         </h1>
 
         <div className="flex gap-8 items-center">
-          <Link to="/">Home</Link>
-          <a href="#">Services</a>
-          <a href="#">About</a>
-          <a href="#">Login</a>
+          <Link to="/" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Home</Link>
+          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
+          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About</a>
+          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
 
           <button className="bg-orange-500 px-4 py-2 rounded-lg">
             Get the App
