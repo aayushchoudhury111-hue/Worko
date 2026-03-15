@@ -72,8 +72,9 @@ export default function Plumber() {
         {/* Image Block */}
 
         <div className="flex justify-center">
-          <div className="w-[350px] h-[350px] bg-white/20 rounded-2xl flex items-center justify-center text-gray-200">
-            Plumber Image Block
+          <div className="w-[350px] h-[350px] bg-white/20 rounded-2xl overflow-hidden flex items-center justify-center text-gray-200">
+          <img src="/public/PlumberImage.png" alt="Plumber" className="w-full h-full object-cover"/>
+            {/* Plumber Image Block */}
           </div>
         </div>
 
