@@ -18,9 +18,9 @@ export default function Home() {
 
         <div className="flex gap-8 items-center">
           <Link to="/" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Home</Link>
-          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
-          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About</a>
-          <a href="#" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
+          <a href="#services" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
+          <a href="#about" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About</a>
+          <a href="#login" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
 
           <button className="bg-orange-500 px-4 py-2 rounded-lg">
             Get the App
@@ -72,20 +72,20 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="px-10 py-16">
+      <section id="services" className="px-10 py-16">
         <div className="grid md:grid-cols-3 gap-8">
 
           {[
-            { name: "Electrician", path: "/electrician" },
-            { name: "Plumber", path: "/plumber" },
-            { name: "Carpenter", path: "/carpenter" }
+            { name: "Electrician", path: "/electrician", img: "../public/Electrician.png" },
+            { name: "Plumber", path: "/plumber", img: "../public/PlumberImage.png" },
+            { name: "Carpenter", path: "/carpenter", img: "../public/Carpenter.png" }
           ].map((service, i) => (
 
             <Link to={service.path} key={i}>
-              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition cursor-pointer">
+              <div className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
 
                 <img
-                  src="../public/Electrician.png"
+                  src={service.img}
                   alt={service.name}
                   className="h-40 w-full object-cover rounded-lg mb-4"
                 />
