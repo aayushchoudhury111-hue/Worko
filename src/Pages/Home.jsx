@@ -5,6 +5,7 @@ import {
   IndianRupee,
   Headphones
 } from "lucide-react";
+import { Wrench, Hammer, Plug, Clock, LucideThumbsUp } from "lucide-react";
 
 export default function Home() {
   return (
@@ -17,14 +18,31 @@ export default function Home() {
         </h1>
 
         <div className="flex gap-8 items-center">
-          <Link to="/" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Home</Link>
-          <a href="#services" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
-          <a href="#about" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About</a>
-          <a href="#login" className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
 
-          <button className="bg-orange-500 px-4 py-2 rounded-lg">
+          <Link to="/" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+            Home
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
+          <a href="#services" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+            Services
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+
+          <a href="#about" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+            About
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+
+          <a href="#login" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+            Login
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+
+          <button className="bg-orange-500 px-4 py-2 rounded-xl cursor-pointer hover:bg-orange-600 transition-colors duration-300">
             Get the App
           </button>
+
         </div>
       </nav>
 
@@ -55,7 +73,7 @@ export default function Home() {
               className="w-full border p-3 rounded-md mb-3"
             />
 
-            <button className="w-full bg-red-500 text-white py-3 rounded-md">
+            <button className="w-full bg-red-500 text-white py-3 rounded-md hover:bg-red-600 transition-colors duration-300 cursor-pointer">
               Find Professionals
             </button>
           </div>
@@ -128,7 +146,9 @@ export default function Home() {
 function Feature({ icon, text }) {
   return (
     <div className="bg-white p-6 rounded-xl shadow flex flex-col items-center">
-      <div className="text-orange-500 mb-3">{icon}</div>
+      <div className="text-orange-500 mb-2">
+        <Plug size={30} />
+      </div>
       <p className="font-medium">{text}</p>
     </div>
   );

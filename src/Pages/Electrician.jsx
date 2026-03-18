@@ -18,19 +18,38 @@ export default function ElectricianPage() {
 
       {/* Navbar */}
       <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-5 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">
-          Wor<span className="text-orange-400">Ko</span>
-        </h1>
-        <div className="hidden md:flex gap-8 items-center text-sm">
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Home</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About Us</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
-          <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl">
-            Get the App
-          </button>
-        </div>
-      </nav>
+  <h1 className="text-2xl font-bold">
+    Wor<span className="text-orange-500">Ko</span>
+  </h1>
+
+  <div className="hidden md:flex gap-8 items-center">
+
+    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+      Home
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+      Services
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+      About Us
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+      Login
+      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors duration-300 cursor-pointer">
+      Get the App
+    </button>
+
+  </div>
+</nav>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-16 grid md:grid-cols-2 gap-10 items-center md:text-left">
