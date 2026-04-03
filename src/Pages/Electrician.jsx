@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CheckCircle, Zap, Clock, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ElectricianPage() {
   const [selected, setSelected] = useState(null);
@@ -14,42 +15,51 @@ export default function ElectricianPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="font-sans bg-gray-100">
 
       {/* Navbar */}
-      <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-5 flex justify-between items-center">
-  <h1 className="text-2xl font-bold">
-    Wor<span className="text-orange-500">Ko</span>
-  </h1>
 
-  <div className="hidden md:flex gap-8 items-center">
+      <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-4 md:px-10 py-4 flex justify-between items-center">
 
-    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
-      Home
-      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
-    </a>
+        {/* LOGO */}
+        <Link to="/" className="text-xl md:text-2xl font-bold">
+          Wor<span className="text-orange-500">Ko</span>
+        </Link>
 
-    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
-      Services
-      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
-    </a>
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex gap-6 items-center">
 
-    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
-      About Us
-      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
-    </a>
+          <Link
+            to="/"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            Home
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </Link>
 
-    <a className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
-      Login
-      <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
-    </a>
+          <a
+            href="#about"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            About
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </a>
 
-    <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition-colors duration-300 cursor-pointer">
-      Get the App
-    </button>
+          <a
+            href="#login"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            Login
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </a>
 
-  </div>
-</nav>
+          <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition">
+            Get the App
+          </button>
+
+        </div>
+
+      </nav>
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-16 grid md:grid-cols-2 gap-10 items-center md:text-left">
@@ -77,17 +87,16 @@ export default function ElectricianPage() {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="hidden md:flex justify-center">
           <div className="w-[350px] h-[350px] bg-white/20 rounded-2xl overflow-hidden flex items-center justify-center text-gray-200">
-          <img src="/public/Electrician.png" alt="Electrician" className="w-full h-full object-cover "></img>
+            <img src="/Electrician.png" alt="Electrician" className="w-full h-full object-cover" />
             {/* Electrician Image Block */}
           </div>
         </div>
       </section>
 
       {/* Main Section */}
-      <section className="px-10 py-16 grid md:grid-cols-3 gap-10">
-
+      <section className="px-4 md:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div className="md:col-span-2 space-y-6">
           <h3 className="text-2xl font-bold text-gray-800">
@@ -100,8 +109,8 @@ export default function ElectricianPage() {
                 key={index}
                 onClick={() => setSelected(index)}
                 className={`rounded-xl border px-4 py-3 transition ${selected === index
-                    ? "bg-orange-500 text-white border-orange-500"
-                    : "bg-white hover:bg-gray-100"
+                  ? "bg-orange-500 text-white border-orange-500"
+                  : "bg-white hover:bg-gray-100"
                   }`}
               >
                 {issue}

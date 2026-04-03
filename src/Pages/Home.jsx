@@ -13,9 +13,9 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav className="flex justify-between items-center px-4 md:px-10 py-4 bg-[#1e3a5f] text-white">
-        <h1 className="text-xl md:text-2xl font-bold cursor-pointer">
+        <Link to="/" className="text-xl md:text-2xl font-bold cursor-pointer">
           Wor<span className="text-orange-500">Ko</span>
-        </h1>
+        </Link>
 
         <div className="hidden md:flex gap-6 items-center">
           <Link

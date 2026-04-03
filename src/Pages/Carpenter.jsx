@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CheckCircle, Zap, Clock, Star, Hammer } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Carpenter() {
 
@@ -18,21 +19,46 @@ export default function Carpenter() {
     <div className="min-h-screen bg-gray-100">
 
       {/* Navbar */}
-      <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-10 py-5 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">
-          Wor<span className="text-orange-400">Ko</span>
-        </h1>
+      <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-4 md:px-10 py-4 flex justify-between items-center">
 
-        <div className="hidden md:flex gap-8 items-center text-sm">
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Home</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Services</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">About Us</a>
-          <a className="cursor-pointer border-b-2 border-transparent hover:border-orange-400 transition-all duration-300">Login</a>
+        {/* LOGO */}
+        <Link to="/" className="text-xl md:text-2xl font-bold">
+          Wor<span className="text-orange-500">Ko</span>
+        </Link>
 
-          <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl">
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex gap-6 items-center">
+
+          <Link
+            to="/"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            Home
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </Link>
+
+          <a
+            href="#about"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            About
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </a>
+
+          <a
+            href="#login"
+            className="relative group hover:text-orange-400 tracking-wide"
+          >
+            Login
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+          </a>
+
+          <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-xl transition">
             Get the App
           </button>
+
         </div>
+
       </nav>
 
       {/* Hero Section */}
