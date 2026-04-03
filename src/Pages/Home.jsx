@@ -12,42 +12,52 @@ export default function Home() {
     <div className="font-sans bg-gray-50">
 
       {/* NAVBAR */}
-      <nav className="flex justify-between items-center px-10 py-5 bg-[#1e3a5f] text-white">
-        <h1 className="text-2xl font-bold">
+      <nav className="flex justify-between items-center px-4 md:px-10 py-4 bg-[#1e3a5f] text-white">
+        <h1 className="text-xl md:text-2xl font-bold cursor-pointer">
           Wor<span className="text-orange-500">Ko</span>
         </h1>
 
-        <div className="flex gap-8 items-center">
-
-          <Link to="/" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+        <div className="hidden md:flex gap-6 items-center">
+          <Link
+            to="/"
+            className="relative group tracking-wide hover:text-orange-400"
+          >
             Home
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </Link>
 
-          <a href="#services" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+          <a
+            href="#services"
+            className="relative group tracking-wide hover:text-orange-400"
+          >
             Services
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </a>
 
-          <a href="#about" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+          <a
+            href="#about"
+            className="relative group tracking-wide hover:text-orange-400"
+          >
             About
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </a>
 
-          <a href="#login" className="relative group cursor-pointer hover:text-orange-400 transition-colors duration-300">
+          <a
+            href="#login"
+            className="relative group tracking-wide hover:text-orange-400"
+          >
             Login
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-orange-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </a>
 
           <button className="bg-orange-500 px-4 py-2 rounded-xl cursor-pointer hover:bg-orange-600 transition-colors duration-300">
             Get the App
           </button>
-
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="bg-[#1e3a5f] text-white px-10 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <section className="bg-[#1e3a5f] text-white px-4 md:px-10 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
 
         <div>
           <h2 className="text-5xl font-bold leading-tight">
@@ -79,7 +89,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="hidden md:block">
           <img
             src="../public/WorkoMainImg.jpeg"
             alt="workers"
@@ -105,7 +115,7 @@ export default function Home() {
                 <img
                   src={service.img}
                   alt={service.name}
-                  className="h-40 w-full object-cover rounded-lg mb-4"
+                  className="h-70 w-full object-cover rounded-lg mb-4"
                 />
 
                 <h3 className="text-xl font-semibold">{service.name}</h3>
@@ -145,9 +155,9 @@ export default function Home() {
 
 function Feature({ icon, text }) {
   return (
-    <div className="bg-white p-6 rounded-xl shadow flex flex-col items-center">
-      <div className="text-orange-500 mb-2">
-        <Plug size={30} />
+    <div className="bg-white p-6 rounded-xl shadow flex flex-col items-center hover:shadow-lg transition">
+      <div className="text-orange-500 mb-3 text-3xl bg-orange-100 p-3 rounded-full">
+        {icon}
       </div>
       <p className="font-medium">{text}</p>
     </div>
