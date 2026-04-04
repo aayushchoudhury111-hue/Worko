@@ -16,7 +16,7 @@ export default function Carpenter() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="font-sans bg-gray-100">
 
       {/* Navbar */}
       <nav className="bg-gradient-to-r from-[#1f3b64] to-[#2b4f85] text-white px-4 md:px-10 py-4 flex justify-between items-center">
@@ -100,9 +100,9 @@ export default function Carpenter() {
 
         {/* Image Block */}
 
-        <div className="flex justify-center">
+        <div className="hidden md:flex justify-center">
           <div className="w-[350px] h-[350px] bg-white/20 rounded-2xl overflow-hidden flex items-center justify-center text-gray-200">
-            <img src="/public/Carpenter.png" alt="Carpenter" className="w-full h-full object-cover"/>
+            <img src="/Carpenter.png" alt="Carpenter" className="w-full h-full object-cover"/>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ export default function Carpenter() {
 
       {/* Main Section */}
 
-      <section className="px-10 py-16 grid md:grid-cols-3 gap-10">
+      <section className="px-4 md:px-10 py-16 grid md:grid-cols-2 gap-10 items-center">
 
         {/* Left Content */}
 

@@ -87,10 +87,10 @@ export default function ElectricianPage() {
           </div>
         </div>
 
+        {/* Electrician Image Block */}
         <div className="hidden md:flex justify-center">
           <div className="w-[350px] h-[350px] bg-white/20 rounded-2xl overflow-hidden flex items-center justify-center text-gray-200">
             <img src="/Electrician.png" alt="Electrician" className="w-full h-full object-cover" />
-            {/* Electrician Image Block */}
           </div>
         </div>
       </section>
